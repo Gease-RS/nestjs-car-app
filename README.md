@@ -26,36 +26,41 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+## 1. Criando Aplicação
 
 ```bash
-$ npm install
+# cria uma nova aplicação
+$ nest new nestjs-cars-app
+
+# entre na aplicação
+$ cd nestjs-cars-app
+
+# comando para abrir a aplicação no Visual Code
+$ cd code .
 ```
 
-## Running the app
+## 2. Instalando pacotes
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+# instação ORM e banco de dados
+$ yarn add typeorm mysql @nestjs/typeorm
 ```
 
-## Test
+## 3. Rodando aplicação
 
 ```bash
-# unit tests
-$ npm run test
+# rodando aplicação como desenvolvedor
+$ yarn start:dev
+```
 
-# e2e tests
-$ npm run test:e2e
+## 4. Arquivo .env
 
-# test coverage
-$ npm run test:cov
+```bash
+# exemplo
+PORT=9000
+DB_NAME=yourcar
+DB_USER=root
+DB_PASS=pass
 ```
 
 ## Support
