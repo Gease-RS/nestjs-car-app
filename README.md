@@ -44,6 +44,8 @@ $ cd code .
 ```bash
 # instação ORM e banco de dados
 $ yarn add typeorm mysql @nestjs/typeorm
+
+$ yarn add @nestjs/config
 ```
 
 ## 3. Rodando aplicação
@@ -60,7 +62,40 @@ $ yarn start:dev
 PORT=9000
 DB_NAME=yourcar
 DB_USER=root
-DB_PASS=pass
+DB_PASS=root
+```
+
+## 5. Instalando Mysql com Xampp
+
+```bash
+# Acesso o site https://www.apachefriends.org/pt_br/index.html e baixe o xampp de acordo com seu ambiente win/ubuntu/OS X
+# Execute o arquivo baixado
+
+# Opcional troca de senha do usuário, inicialmente é vazia
+
+# Para trocar a senha do Mysql (nova senha root)
+$ mysqladmin.exe -u root password root
+
+# Troque também no phpadmin no diretório do Xampp procure pelo arquivo config.php ou config.inc.php
+# Abra o arquivo e altere o último espaço da linha $cfg['Servers'][$i]['password'] = 'root';
+
+```
+
+## 6. Acesso ao Mysql por linha de cmd
+
+```bash
+# Digite
+$ mysql -u root -p
+# -u = usuário "root"
+# -p = senha "root"
+
+# Enter password [root]
+
+# Criando database
+$ create database youcar;
+
+# Listando os databases
+$ show databases;
 ```
 
 ## Support
