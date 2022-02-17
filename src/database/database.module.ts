@@ -5,4 +5,8 @@ import { databaseProviders } from './database.providers';
   providers: [...databaseProviders],
   exports: [...databaseProviders],
 })
-export class DatabaseModule {}
+export class DatabaseModule {
+  constructor() {
+    console.log('Database connected successfully!');
+  }
+}

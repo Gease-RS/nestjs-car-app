@@ -68,10 +68,11 @@ DB_PASS=root
 ## 5. Instalando Mysql com Xampp
 
 ```bash
-# Acesso o site https://www.apachefriends.org/pt_br/index.html e baixe o xampp de acordo com seu ambiente win/ubuntu/OS X
+# Acesso o site https://www.apachefriends.org/pt_br/index.html
+# Baixe o xampp de acordo com seu ambiente win/ubuntu/OS X
 # Execute o arquivo baixado
 
-# Opcional troca de senha do usuário, inicialmente é vazia
+# Opcional troca de senha do usuário, inicialmente vem setada como em branco
 
 # Para trocar a senha do Mysql (nova senha root)
 $ mysqladmin.exe -u root password root
@@ -96,6 +97,13 @@ $ create database youcar;
 
 # Listando os databases
 $ show databases;
+```
+
+## 7. Instalando GraphQL
+
+```bash
+# Digite
+$ yarn add @nestjs/graphql @nestjs/apollo graphql apollo-server-express
 ```
 
 ## Support
