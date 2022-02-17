@@ -1,11 +1,12 @@
-import { DatabaseModule } from './database/database.module';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
-import { ConfigModule } from '@nestjs/config';
 import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import { DatabaseModule } from './database/database.module';
 import { GraphQLModule } from '@nestjs/graphql';
-import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { ComponentsModule } from './components/components.module';
+import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 
 @Module({
   imports: [
@@ -13,8 +14,8 @@ import { ComponentsModule } from './components/components.module';
     DatabaseModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
-      playground: (process.env.NODE_ENV === 'development' && true) || false,
-      debug: (process.env.NODE_ENV === 'development' && true) || false,
+      playground: true,
+      debug: true,
       autoSchemaFile: true,
     }),
     ComponentsModule,
